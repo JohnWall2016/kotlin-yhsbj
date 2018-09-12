@@ -9,8 +9,5 @@
         <module name="yhsbj" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="yhsbj" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
