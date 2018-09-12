@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8935564f-1017-4bac-91bd-fde39429eeda" name="Default Changelist" comment="" />
+    <list default="true" id="8935564f-1017-4bac-91bd-fde39429eeda" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/toklin/yhsbj/util/ConfigTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/toklin/yhsbj/util/ConfigTest.kt" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,13 +39,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Kotlin Console" value="184" />
-          <entry key="kt" value="5272" />
+          <entry key="kt" value="5289" />
           <entry key="xml" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="5456" />
+          <entry key="Kotlin" value="5473" />
           <entry key="XML" value="45" />
         </counts>
       </usages-collector>
@@ -51,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/toklin/yhsbj/util/Config.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+            <state relative-caret-position="-130">
+              <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
               <folding>
                 <element signature="e#21#160#0" expanded="true" />
               </folding>
@@ -63,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/toklin/yhsbj/util/ConfigTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="232">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding>
                 <element signature="e#20#95#0" expanded="true" />
               </folding>
@@ -164,6 +166,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -175,8 +180,8 @@
         <option value="$PROJECT_DIR$/src/main/toklin/yhsbj/cjb/hncjb/Transactions.kt" />
         <option value="$PROJECT_DIR$/src/main/toklin/yhsbj/cjb/hncjb/Session.kt" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/toklin/yhsbj/util/ConfigTest.kt" />
         <option value="$PROJECT_DIR$/src/main/toklin/yhsbj/util/Config.kt" />
+        <option value="$PROJECT_DIR$/src/test/toklin/yhsbj/util/ConfigTest.kt" />
       </list>
     </option>
   </component>
@@ -198,6 +203,7 @@
     <option name="width" value="1109" />
     <option name="height" value="1032" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -286,7 +292,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536741985315" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536742644307" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -319,7 +325,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.yhsbj.util.ConfigKt">
+  <component name="RunManager" selected="JUnit.ConfigTest.test">
     <configuration name="ConfigTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yhsbj" />
       <extension name="coverage">
@@ -372,8 +378,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.yhsbj.util.ConfigKt" />
         <item itemvalue="JUnit.ConfigTest.test" />
+        <item itemvalue="Kotlin.yhsbj.util.ConfigKt" />
         <item itemvalue="JUnit.JsonServiceTest.test" />
       </list>
     </recent_temporary>
@@ -432,9 +438,9 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5112867" visible="true" weight="0.18776824" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5112867" visible="true" weight="0.18776824" />
       <window_info id="Structure" order="1" sideWeight="0.48871332" side_tool="true" weight="0.2274678" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.32949308" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
@@ -674,22 +680,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/toklin/yhsbj/util/ConfigTest.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/toklin/yhsbj/util/Config.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="-130">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           <folding>
-            <element signature="e#20#95#0" expanded="true" />
+            <element signature="e#21#160#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/toklin/yhsbj/util/Config.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/toklin/yhsbj/util/ConfigTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+        <state relative-caret-position="232">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding>
-            <element signature="e#21#160#0" expanded="true" />
+            <element signature="e#20#95#0" expanded="true" />
           </folding>
         </state>
       </provider>
