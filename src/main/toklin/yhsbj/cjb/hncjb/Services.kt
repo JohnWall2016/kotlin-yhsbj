@@ -14,7 +14,7 @@ class JsonService<T>(serviceId: String, params: T) {
     val datas = listOf(params)
 
     companion object {
-        fun withoutParms(serviceId: String) = JsonService<Map<Any,Any>>(serviceId, mapOf())
+        fun withoutParams(serviceId: String) = JsonService<Map<Any,Any>>(serviceId, mapOf())
     }
 
     override fun toString(): String {
@@ -29,8 +29,8 @@ interface IService {
 open class CustomService(@Transient override val id: String) : IService {}
 
 open class PageService(id: String, page: Int = 1, size: Int = 15): CustomService(id) {
-    val page = page;
-    val size = size;
+    val page = page
+    val size = size
     var filtering = listOf<Any>()
     var sorting = listOf<Any>()
     var totals = listOf<Any>()

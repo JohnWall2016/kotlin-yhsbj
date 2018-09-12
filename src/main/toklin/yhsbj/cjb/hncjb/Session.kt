@@ -41,7 +41,7 @@ class Session(host: String, port: Int, val userId: String, val password: String)
     inline fun <reified T> get(): T = Result.fromJson<T>(get())
 
     fun login(): String {
-        send(JsonService.withoutParms("loadCurrentUser"))
+        send(JsonService.withoutParams("loadCurrentUser"))
         val header = readHeader()
         var m = "Set-Cookie: jsessionid_ylzcbp=(.+?);".toRegex().find(header)
         if (m != null)
@@ -55,7 +55,7 @@ class Session(host: String, port: Int, val userId: String, val password: String)
     }
 
     fun logout(): String {
-        send(JsonService.withoutParms("syslogout"))
+        send(JsonService.withoutParams("syslogout"))
         return get()
     }
 }
