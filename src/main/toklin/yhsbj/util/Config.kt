@@ -8,14 +8,9 @@ import kotlin.collections.HashMap
 
 class Config {
     companion object {
-        private val configures = Properties()
-        init {
-            InputStreamReader(Files.newInputStream(Paths.get("config.properties")), Charsets.UTF_8).use {
-                configures.load(it)
-            }
-        }
+        private val bundle = ResourceBundle.getBundle("config")
 
-        fun getValue(key: String): String? = configures.getProperty(key)
+        fun getValue(key: String): String? = bundle.getString(key)
 
         private const val splitString = ";"
         private const val matchString = ":"
@@ -59,8 +54,4 @@ class Config {
             }
         }
     }
-}
-
-fun main(args: Array<String>) {
-    println(Config.getValue("user002_id"))
 }
