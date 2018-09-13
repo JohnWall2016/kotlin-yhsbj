@@ -7,8 +7,9 @@ import java.util.*
 
 class ConfigTest {
     @Test fun test() {
-        val bundle = ResourceBundle.getBundle("config")
-        println(bundle.getString("user002_id"))
-        println(bundle.getString("jbzt_map"))
+        println(Config.getValue("user002_id"))
+        println(Config.getValue("jbzt_map"))
+        println(Config.getMapValue("jbzt_map", "3"))
+        println(Config.getMapValue("jbzt_map", "3", "4"))
     }
 }

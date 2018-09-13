@@ -6,7 +6,7 @@ import com.google.gson.GsonBuilder
 class JsonService<T>(serviceId: String, params: T) {
     val serviceid = serviceId
     val target = ""
-    var sessionid = ""
+    var sessionid: String? = null
     var loginname = ""
     var password = ""
 
@@ -15,6 +15,7 @@ class JsonService<T>(serviceId: String, params: T) {
 
     companion object {
         fun withoutParams(serviceId: String) = JsonService<Map<Any,Any>>(serviceId, mapOf())
+        fun create(service: IService) = JsonService(service.id, service)
     }
 
     override fun toString(): String {

@@ -1,8 +1,5 @@
 package yhsbj.util
 
-import java.io.InputStreamReader
-import java.nio.file.Files
-import java.nio.file.Paths
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -35,12 +32,9 @@ class Config {
         }
 
         fun getMapValue(key: String, vararg subKeys: String): String? {
-            val map = if (mapCache.containsKey(key))
-                mapCache[key]
-            else
-                loadMap(key)
+            val map =  mapCache[key] ?: loadMap(key)
             var subKey = subKeys.joinToString(hyphenString)
-            if (map!!.containsKey(subKey))
+            if (map.containsKey(subKey))
                 return map[subKey]
             else {
                 for (i in 1 until subKeys.size) {

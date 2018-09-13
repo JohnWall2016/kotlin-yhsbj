@@ -58,4 +58,19 @@ class Session(host: String, port: Int, val userId: String, val password: String)
         send(JsonService.withoutParams("syslogout"))
         return get()
     }
+
+    companion object {
+        fun user002(): Session {
+            return Session(Configs.serverIP, Configs.serverPort.toInt(),
+                    Configs.userId002, Configs.userPwd002)
+        }
+
+        fun user002(block: (Session) -> Unit) {
+            user002().use {
+                it.login()
+                block(it)
+                it.logout()
+            }
+        }
+    }
 }
