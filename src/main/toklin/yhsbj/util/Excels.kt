@@ -8,23 +8,21 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook
 import java.nio.file.Files
 import java.nio.file.Paths
 
-class Excels {
+object Excels {
     enum class Type { XLS, XLSX, AUTO }
 
     class UnsupportedTypeException: Exception("Unsupported excel type")
 
-    companion object {
-        fun load(fileName: String, type: Type = Type.AUTO): Workbook {
-            var tp = type
-            if (fileName.endsWith(".xls", true))
-                tp = Type.XLS
-            else if (fileName.endsWith(".xlsx", true))
-                tp = Type.XLSX
-            when (tp) {
-                Type.XLS -> return HSSFWorkbook(Files.newInputStream(Paths.get(fileName)))
-                Type.XLSX -> return XSSFWorkbook(Files.newInputStream(Paths.get(fileName)))
-                else -> throw UnsupportedTypeException()
-            }
+    fun load(fileName: String, type: Type = Type.AUTO): Workbook {
+        var tp = type
+        if (fileName.endsWith(".xls", true))
+            tp = Type.XLS
+        else if (fileName.endsWith(".xlsx", true))
+            tp = Type.XLSX
+        when (tp) {
+            Type.XLS -> return HSSFWorkbook(Files.newInputStream(Paths.get(fileName)))
+            Type.XLSX -> return XSSFWorkbook(Files.newInputStream(Paths.get(fileName)))
+            else -> throw UnsupportedTypeException()
         }
     }
 }

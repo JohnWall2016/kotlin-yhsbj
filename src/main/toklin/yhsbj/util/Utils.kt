@@ -5,7 +5,7 @@ object Utils {
         val idx = fileName.lastIndexOf(".")
         return if (idx > 0) {
             fileName.substring(0, idx) + appendText + fileName.substring(idx)
-        } else{
+        } else {
             fileName + appendText
         }
     }
