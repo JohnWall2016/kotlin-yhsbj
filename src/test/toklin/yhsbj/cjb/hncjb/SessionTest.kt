@@ -9,8 +9,8 @@ class SessionTest {
             val query = it.dump(GrinfoQuery("130503193510300329"))
             println("query: $query")
             it.send(query)
-            val rs = it.get<Result<Grinfo>>()
-            println("rs: ${rs}")
+            val rs = it.get<Grinfo>()
+            println("rs: ${rs}\n${rs.datas[0].pid}")
         }
     }
 }

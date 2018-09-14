@@ -2,6 +2,7 @@ package yhsbj.cjb.hncjb
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
 
 class JsonService<T>(serviceId: String, params: T) {
     val serviceid = serviceId
@@ -54,7 +55,10 @@ class Result<T> {
     var datas = ArrayList<T>()
 
     companion object {
-        inline fun <reified T> fromJson(json: String) = Gson().fromJson(json, T::class.java)
+        inline fun <reified T> fromJson(json: String): Result<T> {
+            val type = TypeToken.getParameterized(Result::class.java, T::class.java).type
+            return Gson().fromJson<Result<T>>(json, type)
+        }
     }
 
     override fun toString(): String {

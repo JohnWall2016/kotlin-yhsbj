@@ -25,41 +25,41 @@ object Excels {
             else -> throw UnsupportedTypeException()
         }
     }
+}
 
-    fun Workbook.save(fileName: String) {
-        Files.newOutputStream(Paths.get(fileName)).use {
-            this.write(it)
-        }
+fun Workbook.save(fileName: String) {
+    Files.newOutputStream(Paths.get(fileName)).use {
+        this.write(it)
     }
+}
 
-    fun Sheet.createRow(dstRowIdx: Int, srcRowIdx: Int): Row {
-        val dstRow = this.createRow(dstRowIdx)
-        val srcRow = this.getRow(srcRowIdx)
-        dstRow.height = srcRow.height
-        for (idx in srcRow.firstCellNum until srcRow.physicalNumberOfCells) {
-            val dstCell = dstRow.createCell(idx)
-            val srcCell = srcRow.getCell(idx)
-            dstCell.cellType = srcCell.cellType
-            dstCell.cellStyle = srcCell.cellStyle
-            dstCell.setCellValue("")
-        }
-        return dstRow
+fun Sheet.createRow(dstRowIdx: Int, srcRowIdx: Int): Row {
+    val dstRow = this.createRow(dstRowIdx)
+    val srcRow = this.getRow(srcRowIdx)
+    dstRow.height = srcRow.height
+    for (idx in srcRow.firstCellNum until srcRow.physicalNumberOfCells) {
+        val dstCell = dstRow.createCell(idx)
+        val srcCell = srcRow.getCell(idx)
+        dstCell.cellType = srcCell.cellType
+        dstCell.cellStyle = srcCell.cellStyle
+        dstCell.setCellValue("")
     }
+    return dstRow
+}
 
-    fun Sheet.getOrCopyRow(dstRowIdx: Int, srcRowIdx: Int): Row {
-        if (dstRowIdx <= srcRowIdx) {
-            return this.getRow(srcRowIdx)
-        }
-        else {
-            if (this.lastRowNum >= dstRowIdx)
-                this.shiftRows(dstRowIdx, this.lastRowNum, 1, true, false)
-            return createRow(dstRowIdx, srcRowIdx)
-        }
+fun Sheet.getOrCopyRow(dstRowIdx: Int, srcRowIdx: Int): Row {
+    if (dstRowIdx <= srcRowIdx) {
+        return this.getRow(srcRowIdx)
     }
+    else {
+        if (this.lastRowNum >= dstRowIdx)
+            this.shiftRows(dstRowIdx, this.lastRowNum, 1, true, false)
+        return createRow(dstRowIdx, srcRowIdx)
+    }
+}
 
-    fun Sheet.copyRows(start: Int, count: Int, srcRowIdx: Int) {
-        this.shiftRows(start, this.lastRowNum, count, true, false)
-        for (i in 0 until count)
-            createRow(start + i, srcRowIdx)
-    }
+fun Sheet.copyRows(start: Int, count: Int, srcRowIdx: Int) {
+    this.shiftRows(start, this.lastRowNum, count, true, false)
+    for (i in 0 until count)
+        createRow(start + i, srcRowIdx)
 }

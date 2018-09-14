@@ -38,7 +38,7 @@ class Session(host: String, port: Int, val userId: String, val password: String)
 
     fun get() = readBody()
 
-    inline fun <reified T> get(): T = Result.fromJson<T>(get())
+    inline fun <reified T> get(): Result<T> = Result.fromJson<T>(get())
 
     fun login(): String {
         send(JsonService.withoutParams("loadCurrentUser"))
