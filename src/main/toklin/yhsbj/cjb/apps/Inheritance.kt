@@ -4,6 +4,9 @@ import yhsbj.cjb.hncjb.Grinfo
 import yhsbj.cjb.hncjb.GrinfoQuery
 import yhsbj.cjb.hncjb.Session
 import yhsbj.util.*
+import yhsbj.util.excel.Excels
+import yhsbj.util.excel.mustGetCell
+import yhsbj.util.excel.save
 
 fun main(args: Array<String>) {
     val fn = "D:\\暂停终止\\死亡继承\\死亡继承汇总表.xls"
