@@ -63,3 +63,5 @@ fun Sheet.copyRows(start: Int, count: Int, srcRowIdx: Int) {
     for (i in 0 until count)
         createRow(start + i, srcRowIdx)
 }
+
+fun Row.mustGetCell(idx: Int) = this.getCell(idx) ?: this.createCell(idx)

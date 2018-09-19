@@ -9,7 +9,7 @@ import yhsbj.util.save
 
 fun main(args: Array<String>) {
     val fn = "D:\\待遇认证\\2018年\\乡镇街上报认证汇总表\\汇总表2.xls"
-    val wb = Excels.load(fn).use {
+    Excels.load(fn).use {
         val sheet = it.getSheetAt(0)
         Session.user002 {
             for (i in 4..sheet.lastRowNum) {
