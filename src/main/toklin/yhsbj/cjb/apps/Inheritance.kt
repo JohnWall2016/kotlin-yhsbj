@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
             for (i in 2..105) {
                 val row = sheet.getRow(i)
                 val idcard = row.getCell(1).stringCellValue
-                print("$idcard: ")
+                print("${i - 1} $idcard: ")
 
                 val cbxx = getCbxx(it, idcard)
                 row.mustGetCell(2).setCellValue(cbxx.v1)
