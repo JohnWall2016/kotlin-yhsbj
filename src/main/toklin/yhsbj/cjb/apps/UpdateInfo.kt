@@ -1,11 +1,10 @@
-package yhsbj.cjb.apps
+package yhsbj.cjb.apps.updateinfo
 
 import yhsbj.cjb.hncjb.Grinfo
 import yhsbj.cjb.hncjb.GrinfoQuery
 import yhsbj.cjb.hncjb.Session
-import yhsbj.util.Excels
+import yhsbj.util.excel.*
 import yhsbj.util.Utils
-import yhsbj.util.save
 
 fun main(args: Array<String>) {
     val fn = "D:\\待遇认证\\2018年\\乡镇街上报认证汇总表\\汇总表2.xls"
