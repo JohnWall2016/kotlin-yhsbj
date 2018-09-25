@@ -3,10 +3,10 @@ package yhsbj.cjb.hncjb
 import yhsbj.util.Config
 
 object Configs {
-    val serverIP get() = getValue("hncjb_ip")
-    val serverPort get() = getValue("hncjb_port")
-    val userId002 get() = getValue("user002_id")
-    val userPwd002 get() = getValue("user002_pwd")
+    val serverIP = getValue("hncjb_ip")
+    val serverPort = getValue("hncjb_port")
+    val userId002 = getValue("user002_id")
+    val userPwd002 = getValue("user002_pwd")
 
     fun getJbztCN(jfzt: String, cbzt: String) = getMapValue("jbzt_map", jfzt, cbzt)
 
