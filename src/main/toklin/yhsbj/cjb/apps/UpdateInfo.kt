@@ -8,15 +8,15 @@ import yhsbj.util.Utils
 
 fun main(args: Array<String>) {
     val fn = "D:\\待遇认证\\2018年\\乡镇街上报认证汇总表\\汇总表2.xls"
-    Excels.load(fn).use {
-        val sheet = it.getSheetAt(0)
-        Session.user002 {
+    Excels.load(fn).use { workbook ->
+        val sheet = workbook.getSheetAt(0)
+        Session.user002 { session ->
             for (i in 4..sheet.lastRowNum) {
                 val row = sheet.getRow(i)
                 val idcard = row.getCell(5).stringCellValue
 
-                it.send(GrinfoQuery(idcard))
-                val rs = it.get<Grinfo>()
+                session.send(GrinfoQuery(idcard))
+                val rs = session.get<Grinfo>()
 
                 var state = "未在我区参加居保"
                 if (rs.datas.size > 0) {
@@ -27,6 +27,6 @@ fun main(args: Array<String>) {
                 println("$idcard: $state")
             }
         }
-        it.save(Utils.appendToFileName(fn, ".new"))
+        workbook.save(Utils.appendToFileName(fn, ".new"))
     }
 }
